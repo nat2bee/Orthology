@@ -42,6 +42,26 @@ Shared_Ortho.py -1 *ortho_sp2* -2 *ortho_sp3* -o *output*
 -h for usage help
 
 
+# Select_Ortho.py
+
+Check the list of ortologous pairs from OMA and separate the orthologous of interest based on a list of ID provided by the user.
+Ref.: Altenhoff A et al., The OMA orthology database in 2015: function predictions, better plant support, synteny view and other improvements, Nucleic Acids Research, 2015, 43 (D1): D240-D249 (doi:10.1093/nar/gku1158).
+
+Developed (in my case) to get only the orthology data from the genes that appear in all species. 
+
+**Usage**
+Select_Ortho.py -i *pair file* -l *list_interest* -o *output*
+
+**Where** 
+pair file = orthologous pair file result from **OMA** for any two species
+list_interest = list of the genes ID you want to recover from the pair file (one per line). Only get the sp1 ID.
+output = output with the orthology info (like reported by **OMA**) of the genes from the interest list
+
+**Options**
+-h for usage help
+
+
+
 # Select_Ortho2.py
 
 Check the list of ortologous pairs from OMA and separate the orthologous of interest based on a list of ID provided by the user.
@@ -59,4 +79,60 @@ list_interest = list of the genes ID you want to recover from the pair file (one
 output = output with the orthology info (like reported by **OMA**) of the genes from the interest list
 
 **Options** 
+-h for usage help
+
+
+# One_Multi.py
+
+Select only one orthologous from a 1:multi orthologous data (reported by OMA pairwise analyses).
+
+Ref.: Altenhoff A et al., The OMA orthology database in 2015: function predictions, better plant support, synteny view and other improvements, Nucleic Acids Research, 2015, 43 (D1): D240-D249 (doi:10.1093/nar/gku1158).
+
+**Usage**
+One_Multi.py -i *1:multi* -o *output prefix*
+
+**Where** 
+-i = table as the output from pairwise orthology analyses in **OMA** but only with **1:multi** orthologous type
+-o = prefix for the output files. 2 outputs will be generated: *1- prefix_OMA.txt*, table containing the orthologous pairs
+determinied by OMA as one group; *2- prefix_nogroup.txt*, table containing the putative orthologous pairs to be chosen by the user.
+
+**Options**
+-h for usage help
+
+
+
+# Multi_One.py
+
+Select only one orthologous from a multi:1 orthologous data (reported by OMA pairwise analyses).
+
+Ref.: Altenhoff A et al., The OMA orthology database in 2015: function predictions, better plant support, synteny view and other improvements, Nucleic Acids Research, 2015, 43 (D1): D240-D249 (doi:10.1093/nar/gku1158).
+
+**Usage**
+Multi_One.py -i *multi:1* -o *output prefix*
+
+**Where** 
+-i = table as the output from pairwise orthology analyses in **OMA** but only with **multi:1** orthologous type
+-o = prefix for the output files. 2 outputs will be generated: *1- prefix_OMA.txt*, table containing the orthologous pairs
+determinied by OMA as one group; *2- prefix_nogroup.txt*, table containing the putative orthologous pairs to be chosen by the user.
+
+**Options**
+-h for usage help
+
+
+
+# Multi_Multi.py
+
+Select only one orthologous from a multi:multi orthologous data (reported by OMA pairwise analyses).
+
+Ref.: Altenhoff A et al., The OMA orthology database in 2015: function predictions, better plant support, synteny view and other improvements, Nucleic Acids Research, 2015, 43 (D1): D240-D249 (doi:10.1093/nar/gku1158).
+
+**Usage**
+Multi_Multi.py -i *multi:multi* -o *output prefix*
+
+**Where**
+-i = table as the output from pairwise orthology analyses in **OMA** but only with **multi:multi** orthologous type
+-o = prefix for the output files. 2 outputs will be generated: *1- prefix_OMA.txt*, table containing the orthologous pairs
+determinied by OMA as one group; *2- prefix_nogroup.txt*, table containing the putative orthologous pairs to be chosen by the user.
+
+**Options**
 -h for usage help
