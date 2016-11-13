@@ -3,9 +3,10 @@
 
 """
 Check the list of ortologous pairs from OMA and separate the orthologous of interest based on a list of ID provided by the user.
+Like Selcte_Ortho.py but for other input format
 Ref.: Altenhoff A et al., The OMA orthology database in 2015: function predictions, better plant support, synteny view and other improvements, Nucleic Acids Research, 2015, 43 (D1): D240-D249 (doi:10.1093/nar/gku1158).
 
-Developed (in my case) to get only the orthology data from the genes that appear in all species. 
+Developed (in my case) to get only the orthology data from the genes that appear in all species (file format after cleaning 1-1). 
 
 Usage = Select_Ortho2.py -i <pair file> -l <list_interest> -o <output>
 
